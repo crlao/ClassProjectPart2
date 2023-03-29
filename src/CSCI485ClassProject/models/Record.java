@@ -1,6 +1,5 @@
 package CSCI485ClassProject.models;
 
-
 import CSCI485ClassProject.StatusCode;
 
 import java.util.ArrayList;

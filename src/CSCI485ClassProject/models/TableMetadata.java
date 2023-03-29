@@ -1,7 +1,5 @@
 package CSCI485ClassProject.models;
 
-import CSCI485ClassProject.StatusCode;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -9,6 +7,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
+
+import CSCI485ClassProject.StatusCode;
 
 
 /**
