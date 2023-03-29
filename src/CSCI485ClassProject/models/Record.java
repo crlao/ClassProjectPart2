@@ -33,7 +33,6 @@ public class Record {
       if (this == o) return true;
       if (o == null || getClass() != o.getClass()) return false;
       Value value1 = (Value) o;
-      Object val = value1.value;
       return Objects.equals(value, value1.value);
     }
 
