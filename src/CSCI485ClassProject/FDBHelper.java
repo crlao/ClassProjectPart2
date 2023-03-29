@@ -115,6 +115,7 @@ public class FDBHelper {
   public static boolean tryCommitTx(Transaction tx, int retryCounter) {
     try {
       tx.commit().join();
+      tx.close();
       return true;
     } catch (FDBException e) {
       if (retryCounter < MAX_TRANSACTION_COMMIT_RETRY_TIMES) {
@@ -122,6 +123,7 @@ public class FDBHelper {
         tryCommitTx(tx, retryCounter);
       } else {
         tx.cancel();
+        tx.close();
         return false;
       }
     }
@@ -130,5 +132,6 @@ public class FDBHelper {
 
   public static void abortTransaction(Transaction tx) {
     tx.cancel();
+    tx.close();
   }
 }
